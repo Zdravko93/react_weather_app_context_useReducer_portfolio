@@ -22,3 +22,21 @@
   text-decoration: overline solid 3px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
+
+@media (max-width: 850px) {
+  .header-flex-group {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0em;
+  }
+
+  .header-flex-group img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header-flex-group h1 {
+    font-size: 1.3rem;
+  }
+}

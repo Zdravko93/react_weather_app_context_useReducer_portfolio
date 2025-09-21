@@ -18,7 +18,7 @@ export const getAQIDescription = (aqi) => {
 export const getAQIClasses = (aqi) => {
   switch (aqi) {
     case 1:
-      return "top";
+      return "good";
     case 2:
       return "fair";
     case 3:
@@ -27,5 +27,7 @@ export const getAQIClasses = (aqi) => {
       return "poor";
     case 5:
       return "very-poor";
+    default:
+      return "unknown";
   }
 };

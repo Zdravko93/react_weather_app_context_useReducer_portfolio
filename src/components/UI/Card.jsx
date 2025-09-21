@@ -1,8 +1,6 @@
-import React from "react";
-
 export default function Card({
   WRAPPER: Wrapper = "li",
-  ariaText,
+  ariaLabel,
   ariaLive,
   ariaRole,
   ariaLabelledBy,
@@ -12,7 +10,7 @@ export default function Card({
 }) {
   return (
     <Wrapper
-      aria-label={ariaText || undefined}
+      aria-label={ariaLabel || undefined}
       aria-live={ariaLive !== "off" ? ariaLive : undefined}
       aria-labelledby={ariaLabelledBy || undefined}
       aria-describedby={ariaDescribedBy || undefined}

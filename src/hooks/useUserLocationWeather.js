@@ -1,87 +1,101 @@
+import { useCallback } from "react";
+import { useWeatherContext } from "../context/WeatherContext";
 import {
   fetchWeatherByGeolocation,
   fetchAdditionalWeatherData,
 } from "../utils/weatherAPI";
-import { getSunriseSunsetTimes } from "../utils/utilsSunriseSunsetTimes";
 import { getWindDirection } from "../utils/utilsWindData";
-//context
-import { useWeatherContext } from "../context/WeatherContext";
+import { getSunriseSunsetTimes } from "../utils/utilsSunriseSunsetTimes";
+import { getFriendlyError } from "../utils/errorHandler";
 
 export const useUserLocationWeather = (API_KEY) => {
   const { state, dispatch } = useWeatherContext();
   const { city, isLocationWeatherFetched } = state;
 
-  const fetchWeatherByUserLocation = async () => {
-    if (isLocationWeatherFetched) return; // prevent duplicate fetching
+  // Success callback - memoized
+  const onPositionSuccess = useCallback(
+    async (position) => {
+      const { latitude, longitude } = position.coords;
 
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude } = position.coords;
+      dispatch({ type: "SET_ERROR", payload: null }); // Reset error at start
+      dispatch({ type: "SET_LOADING", payload: true });
+      dispatch({ type: "SET_FADE_IN", payload: false });
 
-          dispatch({ type: "SET_LOADING", payload: true });
-          dispatch({ type: "SET_FADE_IN", payload: false });
+      try {
+        const weatherData = await fetchWeatherByGeolocation(
+          latitude,
+          longitude,
+          API_KEY
+        );
 
-          try {
-            const weatherData = await fetchWeatherByGeolocation(
-              latitude,
-              longitude,
-              API_KEY
-            );
-            const cityName = weatherData.name;
+        const cityName = weatherData?.name ?? "";
 
-            if (cityName !== city) {
-              dispatch({ type: "SET_CITY", payload: cityName });
-            }
-
-            dispatch({ type: "SET_WEATHER_DATA", payload: weatherData });
-
-            // Fetch other weather-related data
-            const { airQualityData, forecastData, uvIndexData } =
-              await fetchAdditionalWeatherData(latitude, longitude, API_KEY);
-            dispatch({ type: "SET_AIR_QUALITY_DATA", payload: airQualityData });
-            dispatch({ type: "SET_FORECAST_DATA", payload: forecastData });
-            dispatch({ type: "SET_UV_INDEX", payload: uvIndexData.value });
-
-            // Handle sunrise and sunset times
-            const sunriseTime = getSunriseSunsetTimes(weatherData.sys.sunrise);
-            const sunsetTime = getSunriseSunsetTimes(weatherData.sys.sunset);
-            dispatch({
-              type: "SET_SUNRISE_SUNSET",
-              payload: { sunrise: sunriseTime, sunset: sunsetTime },
-            });
-
-            // Handle wind data
-            const windData = {
-              speed: weatherData.wind.speed,
-              direction: getWindDirection(weatherData.wind.deg),
-            };
-            dispatch({ type: "SET_WIND_DATA", payload: windData });
-
-            dispatch({ type: "SET_ERROR", payload: null });
-            dispatch({ type: "SET_LOCATION_WEATHER_FETCHED", payload: true });
-          } catch (error) {
-            dispatch({ type: "SET_ERROR", payload: error.message });
-            dispatch({ type: "SET_WEATHER_DATA", payload: null });
-          } finally {
-            dispatch({ type: "SET_LOADING", payload: false });
-            dispatch({ type: "SET_FADE_IN", payload: true });
-          }
-        },
-        // Error callback if geolocation fails
-        (error) => {
-          if (error.code === error.PERMISSION_DENIED) {
-            alert("Geolocation permission denied. Cannot fetch weather data.");
-          } else {
-            alert("Unable to fetch geolocation data.");
-          }
-          dispatch({ type: "SET_ERROR", payload: "Geolocation error" });
+        if (cityName && cityName !== city) {
+          dispatch({ type: "SET_CITY", payload: cityName });
         }
-      );
-    } else {
-      alert("Geolocation is not supported by your browser.");
+
+        const { airQualityData, forecastData, uvIndexData } =
+          await fetchAdditionalWeatherData(latitude, longitude, API_KEY);
+
+        const sunrise = getSunriseSunsetTimes(weatherData?.sys?.sunrise);
+        const sunset = getSunriseSunsetTimes(weatherData?.sys?.sunset);
+
+        const windData = {
+          speed: weatherData?.wind?.speed ?? 0,
+          direction: getWindDirection(weatherData?.wind?.deg ?? 0),
+        };
+
+        dispatch({
+          type: "SET_ALL_WEATHER_DATA",
+          payload: {
+            weatherData,
+            forecastData,
+            airQualityData,
+            uvIndex: uvIndexData?.value ?? null,
+            humidity: weatherData?.main?.humidity ?? null,
+            sunrise,
+            sunset,
+            windData,
+          },
+        });
+
+        dispatch({ type: "SET_LOCATION_WEATHER_FETCHED", payload: true });
+      } catch (error) {
+        dispatch({ type: "SET_ERROR", payload: getFriendlyError(error) });
+        dispatch({ type: "SET_WEATHER_DATA", payload: null });
+      } finally {
+        dispatch({ type: "SET_LOADING", payload: false });
+        dispatch({ type: "SET_FADE_IN", payload: true });
+      }
+    },
+    [API_KEY, city, dispatch]
+  );
+
+  // Error callback - memoized
+  const onPositionError = useCallback(
+    (error) => {
+      const friendly = getFriendlyError(error);
+      dispatch({ type: "SET_ERROR", payload: friendly });
+    },
+    [dispatch]
+  );
+
+  const fetchWeatherByUserLocation = useCallback(() => {
+    if (isLocationWeatherFetched) return;
+
+    if (!("geolocation" in navigator)) {
+      dispatch({
+        type: "SET_ERROR",
+        payload: "Geolocation is not supported by your browser.",
+      });
+      return;
     }
-  };
+
+    navigator.geolocation.getCurrentPosition(
+      onPositionSuccess,
+      onPositionError
+    );
+  }, [isLocationWeatherFetched, onPositionSuccess, onPositionError]);
 
   return { fetchWeatherByUserLocation };
 };

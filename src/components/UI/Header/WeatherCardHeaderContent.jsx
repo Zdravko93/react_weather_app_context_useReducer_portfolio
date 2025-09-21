@@ -1,5 +1,3 @@
-import React from "react";
-
 import appLogo from "../../../assets/weather-app-logo.png";
 
 import classes from "./WeatherCardHeaderContent.module.css";

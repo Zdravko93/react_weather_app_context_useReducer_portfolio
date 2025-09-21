@@ -15,10 +15,34 @@
   opacity: 0;
   visibility: hidden;
 
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-  flex-shrink: 0;
-  z-index: 1000000;
+  z-index: 200;
+}
+
+.arrow-right {
+  right: -5em;
+}
+
+.arrow-right:active {
+  transform: translate(3px, -50%);
+}
+
+.arrow-left {
+  left: -5em;
+}
+
+.arrow-left:active {
+  transform: translate(-3px, -50%);
+}
+
+.details-arrow {
+  border-radius: 50%;
+  color: white;
+  stroke-width: 1.9;
+  transition: transform 200ms ease;
 }
 
 .details-arrow-btn:hover .details-arrow {
@@ -31,38 +55,7 @@
   outline: 4px solid orange;
 }
 
-.details-arrow-btn:active {
-  transform: translateX(10px);
-}
-
-.details-arrow-btn .details-arrow.weather-details-arrow:active {
-  transform: translateX(-20px);
-}
-
 .details-arrow-btn.fade-in {
-  opacity: 1;
-  visibility: visible;
-}
-
-.details-arrow {
-  border-radius: 50%;
-  color: white;
-  stroke-width: 1.9;
-  transition: transform 200ms ease;
-}
-
-.tooltip {
-  position: absolute;
-  color: wheat;
-  bottom: 5em;
-  font-size: 0.7rem;
-  line-height: 1.2;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 200ms ease, visibility 0ms ease;
-}
-
-.details-arrow-btn:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
@@ -72,32 +65,46 @@
   background: green;
 }
 
-[data-theme="light"] .tooltip {
-  color: green;
-}
-
 /* MEDIA QUERIES */
-@media (max-width: 850px) {
+@media (max-width: 970px) {
   .details-arrow-btn {
-    width: 45px;
-    height: 45px;
+    top: 105%;
+    transform: translateY(-50%);
   }
 
-  .weather-details-card-btn {
-    position: relative;
-    right: -4em;
-    /* bottom: -70em;            */
-    background: orange;
+  .arrow-right {
+    top: 50%;
   }
 
-  .weather-details-card-btn .tooltip {
-    color: rgb(12, 151, 59);
+  .arrow-left {
+    left: 3em;
+    top: 105%;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 710px) {
+  .arrow-left {
+    right: 4em;
+    top: 103%;
+  }
+}
+
+@media (max-width: 650px) {
   .details-arrow-btn {
+    top: 102%;
+    transform: translateY(-50%);
     width: 40px;
     height: 40px;
+  }
+
+  .arrow-right {
+    right: 4em;
+    top: 108%;
+  }
+}
+
+@media (max-width: 400px) {
+  .arrow-left {
+    top: 101.5%;
   }
 }

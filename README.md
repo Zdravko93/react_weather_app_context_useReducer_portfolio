@@ -1,20 +1,20 @@
 # Weather App - Context API, useReducer
 
-This is a weather application built with React to showcase my skills and growth in front-end development. The app allows users to check current weather conditions for any location globally, providing weather data and interactive features. This project's goal was to demonstrate my ability to integrate various technologies, work with APIs, and create a user-friendly, visually appealing app. The project will be included in my portfolio website in progress.
+This is a weather application built with React to showcase my skills and growth in front-end development. The app allows users to check current weather conditions for any location globally, providing weather data and interactive features. The goal of this project is to demonstrate my ability to integrate multiple technologies, interact with third-party APIs, and build a polished, user-friendly application. It also serves as a portfolio piece highlighting my front-end development skills.
 
 ## Table of contents
 
 - [Overview](#overview)
-
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-  - [Built with](#built-with)
-    - [useReducer](#usereducer)
-      - [Why use 'useReducer'](#why-use-usereducer)
-  - [What I learned](#what-i-learned)
-
+- [The challenge](#the-challenge)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Links](#links)
+- [Built with](#built-with)
+- [useReducer](#usereducer)
+  - [Why use useReducer](#why-use-usereducer)
+- [What I learned](#what-i-learned)
 - [Useful Resources](#useful-resources)
+- [Contributing](#contributing)
 - [Installation Instructions](#installation-instructions)
 - [Author](#author)
 
@@ -28,7 +28,7 @@ The idea for this project was to build a weather app using external API(OpenWeat
 - View details like temperature, air quality, humidity, wind speed, and weather conditions (e.g., clear, cloudy, rainy).
 - View 5-day weather forecast through an external weather API
 - Interact with the app in a clean, responsive layout that adapts to various screen sizes.
-- Allow the user to toggle between dark(default) and light theme
+- Allow the user to toggle between dark (default) and light themes
 - Allow the user to toggle between Celsius and Fahrenheit units
 - Allow the user to navigate between the basic weather card and detailed weather card including forecast
 - Allow the user to save cities to a favorite list, with an option to directly display the weather data for that city, without needing to search for it again
@@ -36,16 +36,35 @@ The idea for this project was to build a weather app using external API(OpenWeat
 - Allow the user to remove a city from the favorites list and from the local storage
 - Allow the user to display weather data, including a 5-day forecast using geolocation
 
+## Features
+
+---
+
+- Search current weather for any city/location worldwide
+- View temperature, air quality, humidity, wind speed, and weather conditions
+- See 5-day weather forecast
+- Toggle between dark (default) and light themes
+- Switch between Celsius and Fahrenheit units
+- Navigate between basic and detailed weather cards
+- Save favorite cities with persistent local storage
+- Cities saved to favorites are stored in local storage, so users’ favorite locations persist even after refreshing or closing the browser.
+- Remove cities from favorites and local storage
+- Use geolocation to get local weather and forecast
+
 ### Screenshot
 
-![Weather App Dark Theme](./screenshot-dark-theme.png)
-![Weather App Light Theme](./screenshot-light-theme.png)
-![Weather App Basic Card Dark Theme](./screenshot-basic-weather-dark-theme.png)
-![Weather App Basic Card Light Theme](./screenshot-basic-weather-light-theme.png)
+![Weather App Dark Theme Desktop Layout - Details Card](./screenshots/screenshot-dark-theme.png)
+![Weather App Light Theme Desktop Layout - Details Card](./screenshots/screenshot-light-theme.png)
+![Weather App Dark Theme Desktop Layout - Basic Card](./screenshots/screenshot-basic-weather-dark-theme.png)
+![Weather App Light Theme Desktop - Basic Card ](./screenshots/screenshot-basic-weather-light-theme.png)
+![Weather App Dark Theme Mobile Layout - Basic Card](./screenshots/screenshot-dark-theme-mobile%20layout-basic-card.png)
+![Weather App Dark Theme Mobile Layout - Details Card](./screenshots/screenshot-dark-theme-mobile%20layout-details-card.png)
+![Weather App Light Theme Mobile Layout - Basic Card](./screenshots/screenshot-light-theme-mobile%20layout-basic-card.png)
+![Weather App Light Theme Mobile Layout - Details Card](./screenshots/screenshot-light-theme-mobile%20layout-details-card.png)
 
 ### Links
 
-- Solution URL: [Github](https://github.com/Zdravko93/weather_app_context_useReducer_portfolio.git)
+- Solution URL: [Github Repo](https://github.com/Zdravko93/weather_app_context_useReducer_portfolio.git)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/weather_app_context_useReducer_portfolio/)
 
 ### Built with
@@ -64,30 +83,40 @@ The idea for this project was to build a weather app using external API(OpenWeat
 
 In this project, I used the 'useReducer' hook to manage state in components where the logic was more complex than a simple `useState` could handle.
 
-##### Why use 'useReducer'
+##### Why use `useReducer`
 
 - **More Complex State Logic**: When the state logic involves multiple sub-values or when the next state depends on the previous one, `useState` can become cumbersome. `useReducer` is ideal for managing more complex state transitions, especially when the component state becomes difficult to manage with multiple `useState` hooks.
 
-- **Predictable State Changes**: `useReducer' works by dispatching actions that modify the state based on the current state. This approach makes it easier to manage state transitions in a predictable manner, especially for larger applications.
+- **Predictable State Changes**: `useReducer` works by dispatching actions that modify the state based on the current state. This approach makes it easier to manage state transitions in a predictable manner, especially for larger applications.
 
-### What I learned
+### 📘 What I Learned
 
-- Responsive Design: Improved my understanding of responsive design principles, ensuring the app looks great on any device, from desktop to mobile.
-- Asynchronous Programming: Mastered handling asynchronous JavaScript, using fetch() to get real-time data from external sources and updating the UI seamlessly.
-- UI/UX Design: Focused on creating a clean, minimalistic, and user-friendly interface, which enhances the user experience.
-- Error Handling: Implemented error handling for cases when the user enters an invalid city or when the API request fails.
-- Reinforced my knowledge of React concepts such as Context API for managing the global state of the application and explored different approaches to solving coding challenges.
-- Gained much confidence building this project by overcoming many obstacles
-- Improved my skills in code refactoring.
-- Developed a better sense of estimating project timelines.
-- Growth Mindset: Each step in this project allowed me to grow as a developer, pushing myself to learn new skills, debug challenges, and improve my coding practices.
+- Improved responsive design principles
+- Mastered asynchronous programming using `fetch()`
+- Focused on clean, minimalistic UI/UX
+- Implemented error handling for API failures
+- Deepened knowledge of React Context and `useReducer`
+- Boosted confidence through problem-solving
+- Improved refactoring and estimation skills
 
 ## Useful Resources
 
 - [React](https://react.dev/) - React docs
 - [MDN Web Docs - Flexbox](https://developer.mozilla.org/en-US/) - An essential guide for working with Flexbox for responsive layouts.
 - [CSS-Tricks](https://css-tricks.com/) - Using Custom Properties (CSS Variables) - Helpful resource for understanding CSS custom properties (variables) and how to use them in your projects.
-- [Stack Overflow](https://stackoverflow.com/questions) - Excellent resource when u find yourself stuck
+- [Stack Overflow](https://stackoverflow.com/questions) - Excellent resource when you find yourself stuck
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve the app or fix any bugs, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make your changes and commit them (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a Pull Request explaining your changes
+
+Feel free to open issues for bugs or feature requests!
 
 ## Installation Instructions
 

@@ -1,36 +1,26 @@
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import moment from "moment-timezone";
 import { getTimeZoneNameFromOffset } from "../utils/utilsTimeZoneData";
 
+// Return a static time snapshot when forecastData updates.
 export const useCityTime = (forecastData) => {
-  const [currentTime, setCurrentTime] = useState("");
-  const [currentDayOfWeek, setCurrentDayOfWeek] = useState("");
-  const [currentDate, setCurrentDate] = useState("");
-
-  useEffect(() => {
-    const updateCityTime = () => {
-      if (forecastData && forecastData.city && forecastData.list[0]) {
-        const cityOffsetInSeconds = forecastData.city.timezone || 0; // timezone offset in seconds
-        const cityTimezone = getTimeZoneNameFromOffset(cityOffsetInSeconds);
-        const localTime = moment().tz(cityTimezone);
-
-        const hours = localTime.format("HH");
-        const minutes = localTime.format("mm");
-        const seconds = localTime.format("ss");
-        setCurrentTime(`${hours}:${minutes}:${seconds}`);
-
-        const dayOfWeek = localTime.format("dddd");
-        setCurrentDayOfWeek(dayOfWeek);
-
-        const date = localTime.format("DD.MM.YYYY");
-        setCurrentDate(date);
-      }
-    };
-
-    updateCityTime();
-    const intervalId = setInterval(updateCityTime, 1000);
-    return () => clearInterval(intervalId);
+  const cityTimezone = useMemo(() => {
+    if (forecastData?.city?.timezone !== undefined) {
+      const tz = getTimeZoneNameFromOffset(forecastData.city.timezone);
+      if (tz) return tz;
+    }
+    return moment.tz.guess(); // fallback to local
   }, [forecastData]);
 
-  return { currentTime, currentDayOfWeek, currentDate };
+  const timeSnapshot = useMemo(() => {
+    const localTime = moment().tz(cityTimezone);
+
+    return {
+      currentTime: localTime.format("HH:mm"),
+      currentDayOfWeek: localTime.format("dddd"),
+      currentDate: localTime.format("DD.MM.YYYY"),
+    };
+  }, [cityTimezone]);
+
+  return timeSnapshot;
 };

@@ -8,7 +8,7 @@
   box-shadow: 1px 1px 8px 4px rgba(255, 255, 255, 0.6);
   background: #fff;
   cursor: pointer;
-  z-index: 1;
+  z-index: 150;
   position: absolute;
   right: 1em;
   transition: all 100ms ease;
@@ -38,17 +38,6 @@
   border-radius: 50%;
 }
 
-/* WEATHER DETAILS CARD TOGGLE THEME BUTTON POSITION */
-.theme-switcher-btn.weather-details {
-  box-shadow: 1px 1px 8px 4px rgba(255, 255, 255, 0.6);
-  top: 5em;
-  right: 1.8em;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* LIGHT THEME STYLES */
 [data-theme="light"] .theme-switcher-btn:active {
   box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 1);
@@ -59,5 +48,13 @@
   .theme-switcher-btn img {
     width: 35px;
     height: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .theme-switcher-btn,
+  .theme-switcher-btn img {
+    width: 30px;
+    height: 30px;
   }
 }

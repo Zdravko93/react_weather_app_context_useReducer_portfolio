@@ -1,36 +1,53 @@
 import { useCallback } from "react";
+
+import { useWeatherData } from "./useWeatherData";
 import { useWeatherContext } from "../context/WeatherContext";
 
 export const useCitySearch = () => {
-  const { state, dispatch } = useWeatherContext();
-  const { searchQuery, city } = state;
+  const { dispatch } = useWeatherContext();
+  const { API_KEY, city } = useWeatherContext().state;
+  const { fetchCityWeather } = useWeatherData(API_KEY);
 
-  const handleCitySearch = useCallback(() => {
-    if (searchQuery.trim() && searchQuery.trim() !== city) {
-      dispatch({ type: "SET_CITY", payload: searchQuery.trim() });
-      dispatch({ type: "SET_CITY_SEARCHED", payload: true });
-      dispatch({ type: "SET_LOCATION_WEATHER_FETCHED", payload: false }); // reset flag when a city is searched to allow user to use 'use current  location' button again
-      resetInput();
-    }
-  }, [searchQuery, city]);
+  const resetInput = useCallback(() => {
+    dispatch({ type: "SET_SEARCH_QUERY", payload: "" });
+  }, [dispatch]);
 
-  // handle search on 'Enter' press
+  const handleCitySearch = useCallback(
+    (query) => {
+      const trimmedQuery = query.trim();
+
+      if (trimmedQuery && trimmedQuery !== city) {
+        dispatch({ type: "SET_CITY", payload: trimmedQuery });
+        dispatch({ type: "SET_CITY_SEARCHED", payload: true });
+
+        fetchCityWeather(trimmedQuery); // fetch with the query
+
+        resetInput();
+      }
+    },
+    [city, dispatch, resetInput, fetchCityWeather]
+  );
+
   const handleEnterKeyDown = (event) => {
     if (event.key === "Enter") {
       handleCitySearch();
     }
   };
 
-  const handleCityForecast = (selectedCity) => {
-    dispatch({ type: "SET_CITY", payload: selectedCity });
-    dispatch({ type: "SET_CITY_SEARCHED", payload: true });
-    dispatch({ type: "SET_LOCATION_WEATHER_FETCHED", payload: false });
-    resetInput();
-  };
+  const handleCityForecast = useCallback(
+    (selectedCity) => {
+      if (!selectedCity || selectedCity === city) return;
 
-  const resetInput = () => {
-    dispatch({ type: "SET_SEARCH_QUERY", payload: "" });
-  };
+      dispatch({ type: "SET_CITY", payload: selectedCity });
+      dispatch({ type: "SET_CITY_SEARCHED", payload: true });
+      dispatch({ type: "SET_LOCATION_WEATHER_FETCHED", payload: false });
+
+      fetchCityWeather(selectedCity);
+
+      resetInput();
+    },
+    [dispatch, city, resetInput, fetchCityWeather]
+  );
 
   return {
     handleCitySearch,

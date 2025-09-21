@@ -3,16 +3,19 @@ import humidityAverageImg from "../assets/humidity-average.png";
 import humidityHighImg from "../assets/humidity-high.png";
 
 export const getHumidityMark = (humidityPercentage) => {
-  let description = "";
+  let mark;
+  let description;
 
   if (humidityPercentage <= 25) {
     description = "Normal";
-    return { mark: humidityNormalImg, description };
+    mark = humidityNormalImg;
   } else if (humidityPercentage <= 56) {
     description = "Average";
-    return { mark: humidityAverageImg, description };
+    mark = humidityAverageImg;
   } else {
     description = "High";
-    return { mark: humidityHighImg, description };
+    mark = humidityHighImg;
   }
+
+  return { mark, description };
 };

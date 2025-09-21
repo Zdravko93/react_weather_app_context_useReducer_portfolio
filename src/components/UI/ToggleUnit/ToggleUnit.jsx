@@ -2,9 +2,10 @@ import React from "react";
 
 import Card from "../Card";
 import Button from "../Button";
+
 import { useUnitToggle } from "../../../hooks/useUnitToggle";
 
-function ToggleUnit({
+const ToggleUnit = React.memo(function ToggleUnit({
   celsiusBtnClass,
   fahrenheitBtnClass,
   toggleUnitsWrapperClass,
@@ -12,7 +13,7 @@ function ToggleUnit({
 }) {
   const { handleUnitToggle } = useUnitToggle();
 
-  // function to determine if the callback function  expects and argument
+  // function to determine if the callback function expects and argument
   const handleTemperatureUnitChange = (unit) => {
     if (unit) {
       handleUnitToggle(unit);
@@ -26,14 +27,14 @@ function ToggleUnit({
       {children || (
         <>
           <Button
-            ariaText="Switch to Celsius"
+            ariaLabel="Switch to Celsius"
             className={celsiusBtnClass}
             callback={() => handleTemperatureUnitChange("celsius")}
           >
             °C
           </Button>
           <Button
-            ariaText="Switch to Fahrenheit"
+            ariaLabel="Switch to Fahrenheit"
             className={fahrenheitBtnClass}
             callback={() => handleTemperatureUnitChange("fahrenheit")}
           >
@@ -43,6 +44,6 @@ function ToggleUnit({
       )}
     </Card>
   );
-}
+});
 
 export default ToggleUnit;

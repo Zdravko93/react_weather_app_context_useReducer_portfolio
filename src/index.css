@@ -56,7 +56,27 @@ img {
 
 .no-data-placeholder {
   text-align: center;
+  margin-inline: auto;
   color: #f39c12;
+}
+
+/* screen reader class - hide element */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Add to favorites button */
+.add-to-favorites-btn {
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 /* LIGHT THEME STYLES */
@@ -66,4 +86,19 @@ body[data-theme="light"] {
 
 [data-theme="light"] .no-data-placeholder {
   color: #333;
+}
+
+@media (max-width: 850px) {
+  .no-data-placeholder,
+  .no-data-fetch {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .no-data-placeholder,
+  .no-data-fetch {
+    font-size: 0.7rem;
+    max-width: 250px;
+  }
 }

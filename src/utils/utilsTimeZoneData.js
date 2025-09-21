@@ -16,5 +16,5 @@ export const timeZoneOffsets = {
 
 export const getTimeZoneNameFromOffset = (offsetInSeconds) => {
   const timezone = timeZoneOffsets[offsetInSeconds];
-  return timezone || "No data found";
+  return timezone || null;
 };

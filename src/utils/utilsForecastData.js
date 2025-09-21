@@ -12,29 +12,41 @@ const weekdays = [
 
 export const getNextFiveDays = (currentDay) => {
   const currentIndex = weekdays.indexOf(currentDay);
-  return weekdays
-    .slice(currentIndex + 1)
-    .concat(weekdays.slice(0, currentIndex));
+  if (currentIndex === -1) return [];
+
+  // Return next 5 days, cycling through the week array
+  const days = [];
+  for (let i = 1; i <= 5; i++) {
+    days.push(weekdays[(currentIndex + i) % weekdays.length]);
+  }
+  return days;
 };
 
 export const renderForecastData = (forecastData, isCelsius) => {
-  // ensures there's enough forecast data
-  if (!forecastData || !forecastData.list || forecastData.list.length < 5) {
+  if (!forecastData?.list || forecastData.list.length === 0) {
     return null;
   }
 
-  const forecast = forecastData.list.slice(0, 5).map((forecastItem, index) => {
-    const date = new Date(forecastItem.dt * 1000);
+  // Group forecast items by day (date string)
+  const groupedByDay = forecastData.list.reduce((acc, item) => {
+    const date = new Date(item.dt * 1000);
+    const dayKey = date.toISOString().split("T")[0]; // yyyy-mm-dd
+    if (!acc[dayKey]) acc[dayKey] = [];
+    acc[dayKey].push(item);
+    return acc;
+  }, {});
+
+  // Get next 5 days keys sorted
+  const dayKeys = Object.keys(groupedByDay).slice(0, 5);
+
+  const forecast = dayKeys.map((dayKey) => {
+    const dayForecastData = groupedByDay[dayKey];
+    const date = new Date(dayForecastData[0].dt * 1000);
     const dayOfWeek = date.toLocaleString("en-US", { weekday: "short" });
 
     const unit = isCelsius ? "°C" : "°F";
-    const iconCode = forecastItem.weather[0].icon;
+    const iconCode = dayForecastData[0].weather[0].icon;
     const weatherIconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
-
-    const dayForecastData = forecastData.list.filter((item) => {
-      const itemDate = new Date(item.dt * 1000);
-      return itemDate.getDate() === date.getDate(); // Filter items for the same day
-    });
 
     const maxTemperature = Math.max(
       ...dayForecastData.map((item) =>

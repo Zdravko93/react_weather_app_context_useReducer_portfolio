@@ -7,10 +7,33 @@
   position: relative;
 }
 
+/* general button styles inside the .search-wrapper */
 .search-wrapper button {
   padding: 0;
   border: none;
   outline: none;
+}
+
+.search-button {
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  z-index: 20;
+}
+
+.search-button:focus-visible {
+  outline: 3px solid orange;
 }
 
 .search {
@@ -27,7 +50,6 @@
 
 .search:focus-visible {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-  /* outline: 3px solid grey; */
 }
 
 .search::placeholder {
@@ -35,11 +57,6 @@
 }
 
 .search-icon {
-  padding: 1px;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%) !important;
   width: 22px;
   height: 22px;
   cursor: pointer;
@@ -53,7 +70,11 @@
 }
 
 .search-wrapper button:active .search-icon {
-  transform: translateY(-50%) scale(1.5) !important;
+  transform: scale(1.07) !important;
+}
+
+.search-wrapper-error {
+  margin-inline: 1rem;
 }
 
 /* WEATHER DETAILS CARD input styles */
@@ -99,8 +120,8 @@
   }
 
   .search {
-    padding: 0.7em 0em 0.7em 3em;
-    font-size: 0.8em;
+    padding-left: 3.5em;
+    font-size: 0.8rem;
   }
 
   .search-icon {
@@ -115,8 +136,29 @@
   }
 }
 
-@media (max-width: 480px) {
-  .search-wrapper {
-    max-width: 250px;
+@media (max-width: 650px) {
+  .search {
+    padding-left: 4em;
+    font-size: 0.7rem;
   }
+
+  .search-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-wrapper-error,
+  .search-wrapper {
+    width: fit-content;
+    width: fit-content;
+  }
+
+  .search-wrapper-error {
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 500px) {
 }

@@ -1,12 +1,17 @@
-import React from "react";
-
-function Image({ imgSrc, altText, className = "", ariaDescribedBy }) {
+function Image({
+  imgSrc,
+  altText = "",
+  className = "",
+  ariaDescribedBy = "",
+  ...props
+}) {
   return (
     <img
       src={imgSrc}
       alt={altText}
       className={className || undefined}
       aria-describedby={ariaDescribedBy || undefined}
+      {...props}
     />
   );
 }

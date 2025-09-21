@@ -24,3 +24,9 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
+
+@media (max-width: 850px) {
+  .header {
+    height: 150px;
+  }
+}

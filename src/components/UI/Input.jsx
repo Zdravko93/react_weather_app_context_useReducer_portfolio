@@ -1,24 +1,16 @@
-import React from "react";
-
-function Input({ ...props }) {
+function Input({ ariaLabel, ariaDescribedBy, className, onFocus, ...rest }) {
   const ariaProps = {};
-  // only add aria-label if ariaText is provided
-  if (props.ariaText) {
-    ariaProps["aria-label"] = props.ariaText;
+
+  if (ariaLabel) {
+    ariaProps["aria-label"] = ariaLabel;
   }
 
-  // Only add aria-describedby if ariaDescribedBy is provided
-  if (props.ariaDescribedBy) {
-    ariaProps["aria-describedby"] = props.ariaDescribedBy;
+  if (ariaDescribedBy) {
+    ariaProps["aria-describedby"] = ariaDescribedBy;
   }
 
   return (
-    <input
-      className={props.className}
-      onClick={props.onFocus}
-      {...ariaProps}
-      {...props}
-    />
+    <input className={className} onClick={onFocus} {...ariaProps} {...rest} />
   );
 }
 

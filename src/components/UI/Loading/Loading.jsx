@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./Loading.module.css";
 
 import Card from "../../UI/Card";

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://zdravko93.github.io/weather_app_context_useReducer_portfolio/

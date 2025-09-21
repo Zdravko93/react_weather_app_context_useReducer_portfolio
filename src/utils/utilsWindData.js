@@ -21,11 +21,7 @@ const windDirectionImages = {
 
 // wind data calculations
 export const getWindDirectionImage = (windDirection) => {
-  return (
-    windDirectionImages[windDirection] || (
-      <p style={{ color: "red", fontSize: "0.7rem" }}>"Not available"</p>
-    )
-  );
+  return windDirectionImages[windDirection] || null; // return null if no image
 };
 
 export const convertWindSpeed = (speedInMps, isMetric) => {

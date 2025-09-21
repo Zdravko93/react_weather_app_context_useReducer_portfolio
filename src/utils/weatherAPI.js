@@ -1,7 +1,8 @@
 // use input search
 export const fetchWeatherByCity = async (city, API_KEY) => {
+  const encodedCity = encodeURIComponent(city);
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=${API_KEY}`
   );
   if (!response.ok) throw new Error("City not found.");
   return response.json();
@@ -16,7 +17,11 @@ export const fetchWeatherByGeolocation = async (
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
   );
-  if (!response.ok) throw new Error("Unable to fetch weather data.");
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || "City not found.");
+  }
+
   return response.json();
 };
 

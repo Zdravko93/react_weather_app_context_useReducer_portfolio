@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <title>
+      React Weather App Using useReducer | OpenWeatherMap | Zdravko Delić
+    </title>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      rel="canonical"
+      href="https://zdravko93.github.io/weather_app_context_useReducer_portfolio/"
+    />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="A responsive React weather app built with useReducer and OpenWeatherMap API. Features include temperature unit toggle, current weather, and a clean UI."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <!--OPEN GRAPH-->
+    <meta property="og:title" content="React Weather App | Zdravko Delić" />
+    <meta
+      property="og:description"
+      content="Responsive React weather app using useReducer and OpenWeatherMap API. Toggle units, clean UI, and mobile-friendly."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://zdravko93.github.io/weather_app_context_useReducer_portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://zdravko93.github.io/weather_app_context_useReducer_portfolio/screenshot-dark-theme.png"
+    />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="React Weather App | Zdravko Delić" />
+    <meta
+      name="twitter:description"
+      content="Responsive React weather app using useReducer and OpenWeatherMap API. Toggle temperature units, clean UI."
+    />
+    <meta
+      name="twitter:image"
+      content="https://zdravko93.github.io/weather_app_context_useReducer_portfolio/screenshot-dark-theme.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "React Weather App",
+        "operatingSystem": "All",
+        "applicationCategory": "Weather",
+        "description": "A responsive React weather app using useReducer and OpenWeatherMap API.",
+        "author": {
+          "@type": "Person",
+          "name": "Zdravko Delić"
+        },
+        "url": "https://zdravko93.github.io/weather_app_context_useReducer_portfolio/"
+      }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

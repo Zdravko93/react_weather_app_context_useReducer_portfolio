@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./SectionDivider.module.css";
 
 import Card from "../Card";

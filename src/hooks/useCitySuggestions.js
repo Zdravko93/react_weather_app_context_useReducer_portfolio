@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { debounce } from "lodash";
 import { useWeatherContext } from "../context/WeatherContext";
 import { fetchCitySuggestions } from "../utils/citySuggestionsAPI";
@@ -9,6 +9,11 @@ export const useCitySuggestions = (API_KEY) => {
 
   const getCitySuggestions = useCallback(
     debounce(async (query) => {
+      if (!query.trim()) {
+        dispatch({ type: "SET_SUGGESTIONS", payload: [] });
+        return;
+      }
+
       setIsLoading(true);
       dispatch({ type: "SET_LOADING", payload: true });
 
@@ -23,8 +28,14 @@ export const useCitySuggestions = (API_KEY) => {
         setIsLoading(false);
       }
     }, 300),
-    [API_KEY]
+    [API_KEY, dispatch]
   );
+
+  useEffect(() => {
+    return () => {
+      getCitySuggestions.cancel();
+    };
+  }, [getCitySuggestions]);
 
   return { getCitySuggestions, isLoading };
 };

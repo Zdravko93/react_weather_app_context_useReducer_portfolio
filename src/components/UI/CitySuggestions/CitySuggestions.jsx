@@ -2,23 +2,44 @@ import React, { forwardRef } from "react";
 
 import classes from "./CitySuggestions.module.css";
 import CitySuggestion from "./CitySuggestion";
-import { useWeatherContext } from "../../../context/WeatherContext"; // context hook
 
-// Wrap the component in forwardRef to correctly forward the ref
-const CitySuggestions = forwardRef(({ detailsHeaderSuggestionsClass }, ref) => {
-  const { state } = useWeatherContext(); // pull context data
-  const { suggestions } = state; // extract suggestions from the context state
+import { useWeatherContext } from "../../../context/WeatherContext";
 
-  return (
-    <ul
-      ref={ref}
-      className={`${classes["suggestions-list"]} ${detailsHeaderSuggestionsClass}`}
-    >
-      {suggestions.map((suggestion) => (
-        <CitySuggestion key={suggestion.id} suggestion={suggestion} />
-      ))}
-    </ul>
-  );
-});
+// Wrap component in 'forwardRef' to correctly forward the ref
+const CitySuggestions = React.memo(
+  forwardRef(
+    (
+      {
+        detailsHeaderSuggestionsClass,
+        activeIndex,
+        setActiveIndex,
+        handleCityForecast,
+      },
+      ref
+    ) => {
+      const { suggestions } = useWeatherContext().state; // extract context data
+
+      return (
+        <ul
+          ref={ref}
+          className={`${classes["suggestions-list"]} ${detailsHeaderSuggestionsClass}`}
+          role="listbox"
+          aria-label="City suggestions"
+        >
+          {suggestions.map((suggestion, index) => (
+            <CitySuggestion
+              key={suggestion.id}
+              suggestion={suggestion}
+              isActive={index === activeIndex}
+              setActiveIndex={setActiveIndex}
+              index={index}
+              handleCityForecast={handleCityForecast}
+            />
+          ))}
+        </ul>
+      );
+    }
+  )
+);
 
 export default CitySuggestions;

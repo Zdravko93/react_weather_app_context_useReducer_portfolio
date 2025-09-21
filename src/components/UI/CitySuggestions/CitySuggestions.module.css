@@ -11,7 +11,7 @@
   top: 2em;
   left: 0em;
   cursor: pointer;
-  z-index: 100;
+  z-index: 200;
   background: black;
 }
 
@@ -22,12 +22,18 @@
 }
 
 .suggestions-list li:hover {
-  /* background: limegreen; */
   color: orange !important;
+  font-weight: bold;
 }
 
 .suggestions-list-details-header {
   width: 300px;
+}
+
+.suggestion-item-active {
+  background: transparent;
+  color: orange !important;
+  font-weight: bold;
 }
 
 [data-theme="light"] .suggestions-list {

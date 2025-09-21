@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
 
@@ -39,7 +39,6 @@ export const ThemeProvider = ({ children }) => {
     if (theme === "light") {
       document.body.setAttribute("data-theme", theme);
     } else {
-      // remove data-theme attribute and apply default styles(dark theme)
       document.body.removeAttribute("data-theme");
     }
   }, [theme]);

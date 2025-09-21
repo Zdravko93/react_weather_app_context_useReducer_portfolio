@@ -8,7 +8,7 @@ export const convertVisibilityToKm = (visibilityInMeters) => {
 
 export const getVisibilityMark = (visibility) => {
   let description = "";
-  let mark = "";
+  let mark = null;
 
   if (visibility <= 2.5) {
     description = "Poor";

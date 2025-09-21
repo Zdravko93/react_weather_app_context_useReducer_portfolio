@@ -1,18 +1,18 @@
-import React from "react";
-
 import toggleThemeIcon from "../../../assets/toggle-theme-icon.png";
 
 import classes from "./ThemeSwitcher.module.css";
 
-import { useTheme } from "../../../context/ThemeContext";
 import Button from "../Button";
 import Image from "../Image";
+
+import { useTheme } from "../../../context/ThemeContext";
 
 function ThemeSwitcher({ className }) {
   const { toggleTheme } = useTheme();
 
   return (
     <Button
+      aria-label="Toggle theme"
       callback={toggleTheme}
       className={`${classes["theme-switcher-btn"]} ${className}`}
     >
