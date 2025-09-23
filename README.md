@@ -1,5 +1,7 @@
 # Weather App - Context API, useReducer
 
+⚠️ Note: This project was fully rebuilt and re-uploaded due to issues with the previous repo (cache corruption & deployment bugs). The current version reflects a complete refactor with improved structure and documentation.
+
 This is a weather application built with React to showcase my skills and growth in front-end development. The app allows users to check current weather conditions for any location globally, providing weather data and interactive features. The goal of this project is to demonstrate my ability to integrate multiple technologies, interact with third-party APIs, and build a polished, user-friendly application. It also serves as a portfolio piece highlighting my front-end development skills.
 
 ## Table of contents
