@@ -53,7 +53,7 @@ The idea for this project was to build a weather app using external API(OpenWeat
 - Remove cities from favorites and local storage
 - Use geolocation to get local weather and forecast
 
-### Screenshot
+### Screenshots
 
 ![Weather App Dark Theme Desktop Layout - Details Card](./screenshots/screenshot-dark-theme.png)
 ![Weather App Light Theme Desktop Layout - Details Card](./screenshots/screenshot-light-theme.png)
