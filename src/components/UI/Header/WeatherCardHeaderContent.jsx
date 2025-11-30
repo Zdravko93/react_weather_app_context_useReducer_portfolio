@@ -1,3 +1,5 @@
+import React from "react";
+
 import appLogo from "../../../assets/weather-app-logo.png";
 
 import classes from "./WeatherCardHeaderContent.module.css";
@@ -14,4 +16,4 @@ function WeatherCardHeaderContent() {
   );
 }
 
-export default WeatherCardHeaderContent;
+export default React.memo(WeatherCardHeaderContent);
