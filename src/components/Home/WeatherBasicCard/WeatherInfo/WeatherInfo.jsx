@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./WeatherInfo.module.css";
 
 import Card from "../../../UI/Card";
@@ -8,7 +6,7 @@ import RealFeel from "../../WeatherBasicCard/RealFeel/RealFeel";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const WeatherInfo = React.memo(function WeatherInfo() {
+function WeatherInfo() {
   // context
   const { weatherData } = useWeatherContext().state;
   const { main, description } = weatherData.weather[0];
@@ -26,6 +24,6 @@ const WeatherInfo = React.memo(function WeatherInfo() {
       <RealFeel />
     </Card>
   );
-});
+}
 
 export default WeatherInfo;

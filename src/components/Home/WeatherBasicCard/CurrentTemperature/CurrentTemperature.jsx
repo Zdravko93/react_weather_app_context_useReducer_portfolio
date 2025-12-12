@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import classes from "./CurentTemperature.module.css";
 
@@ -8,7 +8,7 @@ import {
 } from "../../../../utils/utilsTemperatureData";
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const CurrentTemperature = React.memo(function WeatherCardCurrentTemperature() {
+function WeatherCardCurrentTemperature() {
   // context
   const { weatherData, isCelsius } = useWeatherContext().state;
   // extract temperature value from weatherData object
@@ -31,6 +31,6 @@ const CurrentTemperature = React.memo(function WeatherCardCurrentTemperature() {
       <span aria-hidden="true">{unit}</span>
     </span>
   );
-});
+}
 
-export default CurrentTemperature;
+export default WeatherCardCurrentTemperature;

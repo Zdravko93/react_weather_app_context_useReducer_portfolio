@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import classes from "./RealFeel.module.css";
 
@@ -10,7 +10,7 @@ import {
 } from "../../../../utils/utilsTemperatureData";
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const RealFeel = React.memo(function RealFeel() {
+function RealFeel() {
   // context
   const { weatherData, isCelsius } = useWeatherContext().state;
   const { feels_like } = weatherData.main; // extracted 'feels_like' temperature in Kelvin
@@ -33,6 +33,6 @@ const RealFeel = React.memo(function RealFeel() {
       </Card>
     </Card>
   );
-});
+}
 
 export default RealFeel;
