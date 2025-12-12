@@ -10,7 +10,7 @@ import Image from "../Image";
 function WeatherCardHeaderContent() {
   return (
     <Card WRAPPER="div" className={classes["header-flex-group"]}>
-      <Image imgSrc={appLogo} altText="Weather app logo" />
+      <Image imgSrc={appLogo} altText="MyForecast weather app logo" />
       <h1>MyForecast</h1>
     </Card>
   );
