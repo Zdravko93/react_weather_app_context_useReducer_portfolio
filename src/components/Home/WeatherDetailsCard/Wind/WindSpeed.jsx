@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./WindSpeed.module.css";
 
 import { convertWindSpeed } from "../../../../utils/utilsWindData";
@@ -7,7 +5,7 @@ import { convertWindSpeed } from "../../../../utils/utilsWindData";
 import Card from "../../../UI/Card";
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const WindSpeed = React.memo(function WindSpeed({ isMetric }) {
+function WindSpeed({ isMetric }) {
   const { windData } = useWeatherContext().state;
 
   if (!windData) {
@@ -26,6 +24,6 @@ const WindSpeed = React.memo(function WindSpeed({ isMetric }) {
       </p>
     </Card>
   );
-});
+}
 
 export default WindSpeed;

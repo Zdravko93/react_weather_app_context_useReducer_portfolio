@@ -1,5 +1,3 @@
-import React from "react";
-
 import sunsetImg from "../../../../assets/sunset.png";
 import sunriseImg from "../../../../assets/sunrise.png";
 
@@ -11,7 +9,7 @@ import TimeData from "./TimeData";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const SunriseSunset = React.memo(function SunriseSunset() {
+function SunriseSunset() {
   const { sunrise, sunset, isCitySearched } = useWeatherContext().state;
 
   return (
@@ -38,6 +36,6 @@ const SunriseSunset = React.memo(function SunriseSunset() {
       </Card>
     </Card>
   );
-});
+}
 
 export default SunriseSunset;

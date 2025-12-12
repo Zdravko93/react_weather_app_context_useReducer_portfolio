@@ -1,11 +1,11 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import classes from "./UVChart.module.css";
 
 import Card from "../../../UI/Card";
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const UVChart = React.memo(function UVChart() {
+function UVChart() {
   const { uvIndex, error } = useWeatherContext().state;
 
   // Memoized rotation
@@ -58,6 +58,6 @@ const UVChart = React.memo(function UVChart() {
       )}
     </Card>
   );
-});
+}
 
 export default UVChart;

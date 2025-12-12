@@ -1,16 +1,10 @@
-import React from "react";
-
 import classes from "./ForecastCity.module.css";
 
 import Card from "../../../UI/Card";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const ForecastCity = React.memo(function ForecastCity({
-  currentDay,
-  currentDate,
-  currentTime,
-}) {
+function ForecastCity({ currentDay, currentDate, currentTime }) {
   const { forecastData } = useWeatherContext()?.state || {};
 
   if (!forecastData?.city) {
@@ -43,6 +37,6 @@ const ForecastCity = React.memo(function ForecastCity({
       </Card>
     </Card>
   );
-});
+}
 
 export default ForecastCity;

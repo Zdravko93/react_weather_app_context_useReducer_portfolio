@@ -1,11 +1,11 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import classes from "./UVDescription.module.css";
 
 import { getUVDescription } from "../../../../utils/utilsUvData";
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const UVDescription = React.memo(function UVDescription() {
+function UVDescription() {
   const { uvIndex } = useWeatherContext().state;
 
   const { text, textColor } = useMemo(
@@ -22,6 +22,6 @@ const UVDescription = React.memo(function UVDescription() {
       <span id="uv-index-label">{text}</span>
     </p>
   );
-});
+}
 
 export default UVDescription;

@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./UV.module.css";
 import weatherDetailsCardClasses from "../WeatherDetailsMain/WeatherDetailsCard.module.css";
 
@@ -9,7 +7,7 @@ import UVChart from "../UV/UVChart";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const UV = React.memo(function UV() {
+function UV() {
   const { isCitySearched } = useWeatherContext().state;
 
   return (
@@ -26,6 +24,6 @@ const UV = React.memo(function UV() {
       </Card>
     </Card>
   );
-});
+}
 
 export default UV;

@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./Humidity.module.css";
 import weatherDetailsCardClasses from "../WeatherDetailsMain/WeatherDetailsCard.module.css";
 
@@ -8,7 +6,7 @@ import HumidityDescription from "./HumidityDescription";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const Humidity = React.memo(function Humidity() {
+function Humidity() {
   // context
   const { humidity, isCitySearched } = useWeatherContext().state;
 
@@ -27,6 +25,6 @@ const Humidity = React.memo(function Humidity() {
       </Card>
     </Card>
   );
-});
+}
 
 export default Humidity;

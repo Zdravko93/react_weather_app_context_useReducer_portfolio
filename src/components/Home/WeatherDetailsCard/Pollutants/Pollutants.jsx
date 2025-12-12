@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./Pollutants.module.css";
 import weatherDetailsCardClasses from "../../WeatherDetailsCard/WeatherDetailsMain/WeatherDetailsCard.module.css";
 
@@ -8,7 +6,7 @@ import Pollutant from "../Pollutants/Pollutant";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const Pollutants = React.memo(function Pollutants() {
+function Pollutants() {
   const { airQualityData, isCitySearched } = useWeatherContext().state;
   const components = airQualityData?.list[0]?.components;
 
@@ -35,6 +33,6 @@ const Pollutants = React.memo(function Pollutants() {
       </Card>
     </Card>
   );
-});
+}
 
 export default Pollutants;

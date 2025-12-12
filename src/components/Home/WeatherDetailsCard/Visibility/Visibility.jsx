@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./Visibility.module.css";
 import weatherDetailsCardClasses from "../../WeatherDetailsCard/WeatherDetailsMain/WeatherDetailsCard.module.css";
 
@@ -10,7 +8,7 @@ import RenderVisibilityData from "../Visibility/RenderVisibilityData";
 import { convertVisibilityToKm } from "../../../../utils/utilsVisibilityData";
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const Visibility = React.memo(function Visibility() {
+function Visibility() {
   const { isCitySearched, forecastData } = useWeatherContext().state;
 
   const visibilityRaw = forecastData?.list?.[0]?.visibility;
@@ -31,6 +29,6 @@ const Visibility = React.memo(function Visibility() {
       </Card>
     </Card>
   );
-});
+}
 
 export default Visibility;

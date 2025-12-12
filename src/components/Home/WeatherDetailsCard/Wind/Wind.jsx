@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import classes from "./Wind.module.css";
 import weatherDetailsCardClasses from "../WeatherDetailsMain/WeatherDetailsCard.module.css";
@@ -12,7 +12,7 @@ import Button from "../../../UI/Button";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const Wind = React.memo(function Wind() {
+function Wind() {
   // context
   const { isCitySearched } = useWeatherContext().state;
   const [isMetric, setIsMetric] = useState(true);
@@ -69,6 +69,6 @@ const Wind = React.memo(function Wind() {
       </Card>
     </Card>
   );
-});
+}
 
 export default Wind;
