@@ -8,7 +8,7 @@ import { getAQIDescription } from "../../../../utils/utilsAirQuality";
 import { getAQIClasses } from "../../../../utils/utilsAirQuality";
 import { useWeatherContext } from "../../../../context/WeatherContext.jsx";
 
-const AirQuality = React.memo(function AirQuality() {
+function AirQuality() {
   // context
   const { airQualityData } = useWeatherContext().state;
 
@@ -40,6 +40,6 @@ const AirQuality = React.memo(function AirQuality() {
       </p>
     </Card>
   );
-});
+}
 
 export default AirQuality;
