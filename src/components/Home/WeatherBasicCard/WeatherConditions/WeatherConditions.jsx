@@ -1,5 +1,3 @@
-import React, { useMemo } from "react";
-
 import classes from "./WeatherConditions.module.css";
 
 import Card from "../../../UI/Card";
@@ -8,15 +6,15 @@ import CurrentTemperature from "../CurrentTemperature/CurrentTemperature.jsx";
 
 import { useWeatherContext } from "../../../../context/WeatherContext";
 
-const WeatherConditions = React.memo(function WeatherConditions() {
+function WeatherConditions() {
   const { weatherData } = useWeatherContext().state;
   const { main } = weatherData.weather[0];
 
   const icon = weatherData.weather[0].icon;
   // dynamic image 'src' value for weather card
-  const weatherImgSrc = useMemo(() => {
+  const weatherImgSrc = () => {
     return `http://openweathermap.org/img/wn/${icon}.png` || "";
-  }, [icon]); // fallback to an empty string - avoid breaking the UI/APP
+  }; // fallback to an empty string - avoid breaking the UI/APP
 
   return (
     <Card
@@ -31,6 +29,6 @@ const WeatherConditions = React.memo(function WeatherConditions() {
       <CurrentTemperature />
     </Card>
   );
-});
+}
 
 export default WeatherConditions;
