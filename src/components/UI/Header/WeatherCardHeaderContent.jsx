@@ -1,6 +1,6 @@
 import React from "react";
 
-import appLogo from "../../../assets/weather-app-logo.png";
+import appLogo from "../../../assets/weather-app-logo.webp";
 
 import classes from "./WeatherCardHeaderContent.module.css";
 
