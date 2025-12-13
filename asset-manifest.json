@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/react_weather_app_context_useReducer_portfolio/static/css/main.4b38ff90.css",
+    "main.css": "/react_weather_app_context_useReducer_portfolio/static/css/main.f583fdff.css",
     "main.js": "/react_weather_app_context_useReducer_portfolio/static/js/main.2897a7d4.js",
     "static/css/439.aef82cb2.chunk.css": "/react_weather_app_context_useReducer_portfolio/static/css/439.aef82cb2.chunk.css",
     "static/js/439.c5d2c746.chunk.js": "/react_weather_app_context_useReducer_portfolio/static/js/439.c5d2c746.chunk.js",
     "static/js/348.00add6b3.chunk.js": "/react_weather_app_context_useReducer_portfolio/static/js/348.00add6b3.chunk.js",
-    "static/media/weather-app-background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-app-background.c5af32084c9eb0c675ba.png",
     "static/media/weather-snow-background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-snow-background.118156442df887c9a5c3.png",
+    "static/media/weather-app-background-desktop.webp": "/react_weather_app_context_useReducer_portfolio/static/media/weather-app-background-desktop.47824f1e48f34f7b97a5.webp",
     "static/media/weather-sun-background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-sun-background.a29034df22ab7e5024ef.png",
     "static/media/weather-thunder-background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-thunder-background.02c7329791f9732bb30b.png",
     "static/media/weather-clear-background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-clear-background.d23d2889d371c9705681.png",
@@ -14,6 +14,7 @@
     "static/media/weather-rain.background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-rain.background.ed46eaceca015f8d147f.png",
     "static/media/visibility-excellent.png": "/react_weather_app_context_useReducer_portfolio/static/media/visibility-excellent.712f789450b93fa9ac8b.png",
     "static/media/visibility-average.png": "/react_weather_app_context_useReducer_portfolio/static/media/visibility-average.8ff2308cf05852e1409e.png",
+    "static/media/weather-app-background-mobile.webp": "/react_weather_app_context_useReducer_portfolio/static/media/weather-app-background-mobile.3ad3ca30ff354ad95c1f.webp",
     "static/media/humidity-average.png": "/react_weather_app_context_useReducer_portfolio/static/media/humidity-average.229716bdff780fee6134.png",
     "static/media/toggle-theme-icon.png": "/react_weather_app_context_useReducer_portfolio/static/media/toggle-theme-icon.660a68ef4c6901dc35a5.png",
     "static/media/humidity-normal.png": "/react_weather_app_context_useReducer_portfolio/static/media/humidity-normal.842ea078ff99d274cc76.png",
@@ -32,14 +33,14 @@
     "static/media/south-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/south-arrow.86058773dae0f4ca298ea1ae61211163.svg",
     "static/media/east-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/east-arrow.8b1f0d33dbb1c37d31544dd7a9bbaaa4.svg",
     "static/media/west-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/west-arrow.1e32b06fdca8537e5edfd06551b24f07.svg",
-    "main.4b38ff90.css.map": "/react_weather_app_context_useReducer_portfolio/static/css/main.4b38ff90.css.map",
+    "main.f583fdff.css.map": "/react_weather_app_context_useReducer_portfolio/static/css/main.f583fdff.css.map",
     "main.2897a7d4.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/main.2897a7d4.js.map",
     "439.aef82cb2.chunk.css.map": "/react_weather_app_context_useReducer_portfolio/static/css/439.aef82cb2.chunk.css.map",
     "439.c5d2c746.chunk.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/439.c5d2c746.chunk.js.map",
     "348.00add6b3.chunk.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/348.00add6b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b38ff90.css",
+    "static/css/main.f583fdff.css",
     "static/js/main.2897a7d4.js"
   ]
 }
