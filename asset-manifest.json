@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_weather_app_context_useReducer_portfolio/static/css/main.4b38ff90.css",
-    "main.js": "/react_weather_app_context_useReducer_portfolio/static/js/main.4d702728.js",
+    "main.js": "/react_weather_app_context_useReducer_portfolio/static/js/main.2897a7d4.js",
     "static/css/439.aef82cb2.chunk.css": "/react_weather_app_context_useReducer_portfolio/static/css/439.aef82cb2.chunk.css",
     "static/js/439.c5d2c746.chunk.js": "/react_weather_app_context_useReducer_portfolio/static/js/439.c5d2c746.chunk.js",
     "static/js/348.00add6b3.chunk.js": "/react_weather_app_context_useReducer_portfolio/static/js/348.00add6b3.chunk.js",
@@ -15,7 +15,6 @@
     "static/media/visibility-excellent.png": "/react_weather_app_context_useReducer_portfolio/static/media/visibility-excellent.712f789450b93fa9ac8b.png",
     "static/media/visibility-average.png": "/react_weather_app_context_useReducer_portfolio/static/media/visibility-average.8ff2308cf05852e1409e.png",
     "static/media/humidity-average.png": "/react_weather_app_context_useReducer_portfolio/static/media/humidity-average.229716bdff780fee6134.png",
-    "static/media/weather-app-logo.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-app-logo.9995d8de23a316a17d78.png",
     "static/media/toggle-theme-icon.png": "/react_weather_app_context_useReducer_portfolio/static/media/toggle-theme-icon.660a68ef4c6901dc35a5.png",
     "static/media/humidity-normal.png": "/react_weather_app_context_useReducer_portfolio/static/media/humidity-normal.842ea078ff99d274cc76.png",
     "static/media/visibility-poor.png": "/react_weather_app_context_useReducer_portfolio/static/media/visibility-poor.632416f6e6ae0877a2e9.png",
@@ -24,6 +23,7 @@
     "static/media/weather-cloud-background.png": "/react_weather_app_context_useReducer_portfolio/static/media/weather-cloud-background.bfbe449e3d9f51e5a9e1.png",
     "static/media/sunset.png": "/react_weather_app_context_useReducer_portfolio/static/media/sunset.45f615ea119e5a1af90b.png",
     "static/media/sunrise.png": "/react_weather_app_context_useReducer_portfolio/static/media/sunrise.2f522b1af5c815730b2b.png",
+    "static/media/weather-app-logo.webp": "/react_weather_app_context_useReducer_portfolio/static/media/weather-app-logo.5fe6c036867ff6cc78f8.webp",
     "index.html": "/react_weather_app_context_useReducer_portfolio/index.html",
     "static/media/southeast-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/southeast-arrow.08e768bed61dc7dfc4b0a379a37b0a4b.svg",
     "static/media/southwest-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/southwest-arrow.7f490e187bd8443faab7b3dc32bd35a2.svg",
@@ -33,13 +33,13 @@
     "static/media/east-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/east-arrow.8b1f0d33dbb1c37d31544dd7a9bbaaa4.svg",
     "static/media/west-arrow.svg": "/react_weather_app_context_useReducer_portfolio/static/media/west-arrow.1e32b06fdca8537e5edfd06551b24f07.svg",
     "main.4b38ff90.css.map": "/react_weather_app_context_useReducer_portfolio/static/css/main.4b38ff90.css.map",
-    "main.4d702728.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/main.4d702728.js.map",
+    "main.2897a7d4.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/main.2897a7d4.js.map",
     "439.aef82cb2.chunk.css.map": "/react_weather_app_context_useReducer_portfolio/static/css/439.aef82cb2.chunk.css.map",
     "439.c5d2c746.chunk.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/439.c5d2c746.chunk.js.map",
     "348.00add6b3.chunk.js.map": "/react_weather_app_context_useReducer_portfolio/static/js/348.00add6b3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b38ff90.css",
-    "static/js/main.4d702728.js"
+    "static/js/main.2897a7d4.js"
   ]
 }
