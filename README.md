@@ -10,6 +10,7 @@ This is a weather application built with React to showcase my skills and growth 
 - [The challenge](#the-challenge)
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Performance & Accessibility](#performance-and-accessibility)
 - [Links](#links)
 - [Built with](#built-with)
 - [useReducer](#usereducer)
@@ -64,10 +65,24 @@ The idea for this project was to build a weather app using external API(OpenWeat
 ![Weather App Light Theme Mobile Layout - Basic Card](./screenshots/screenshot-light-theme-mobile%20layout-basic-card.png)
 ![Weather App Light Theme Mobile Layout - Details Card](./screenshots/screenshot-light-theme-mobile%20layout-details-card.png)
 
+### Performance & Accessibility
+
+To ensure the application delivers a fast and accessible user experience, I audited the project using **Google Lighthouse**.
+
+The app was tested in production mode and achieved strong results across key metrics:
+
+- **Performance**: Optimized asset loading and efficient state management
+- **Accessibility**: Semantic HTML and proper contrast for dark/light themes
+- **Best Practices**: Modern React patterns and secure API usage
+- **SEO**: Proper metadata and structure for discoverability
+
+![Lighthouse Report Mobile](./screenshots/Lighthouse-report-mobile.png)
+![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
+
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Zdravko93/weather_app_context_useReducer_portfolio.git)
-- Live Site URL: [Live Demo](https://zdravko93.github.io/weather_app_context_useReducer_portfolio/)
+- Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
+- Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
 
 ### Built with
 
