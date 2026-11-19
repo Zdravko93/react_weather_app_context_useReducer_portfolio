@@ -64,7 +64,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 ![Weather App Light Theme Mobile Layout - Details Card](./screenshots/screenshot-light-theme-mobile%20layout-details-card.png)
 
 
-### Performance & Accessibility
+## Performance & Accessibility
 
 The application was audited using **Google Lighthouse** in production mode to evaluate its overall quality.
 
@@ -81,13 +81,13 @@ The audit focused on four key areas:
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
 
 
-### Live Demo & Source Code
+## Live Demo & Source Code
 
 - Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
 
 
-### Technologies Used
+## Technologies Used
 
 - **HTML5** - Semantic markup
 - **CSS3** - Styling, CSS variables, Flexbox, and responsive layouts
@@ -99,11 +99,11 @@ The audit focused on four key areas:
 - **Fetch API** - Handling asynchronous HTTP requests
 - **Git & GitHub** - Version control and project management
 
-### State Management: Context API & useReducer 
+## State Management: Context API & useReducer 
 
 This project uses **React Context API** and **useReducer** to organize and manage application state.
 
-#### Why use `useReducer`
+### Why use `useReducer`
 
 I chose useReducer for managing state where multiple related values and more complex state transitions were involved.
 
