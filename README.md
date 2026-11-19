@@ -75,7 +75,7 @@ The audit focused on four key areas:
 - **Best Practices**: Modern React development practices and API integration
 - **SEO**: Metadata and document structure
 
-#### Lighthouse Reports 
+##Lighthouse Reports - Screenshots ## 
 
 ![Lighthouse Report Mobile](./screenshots/Lighthouse-report-mobile.png)
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
