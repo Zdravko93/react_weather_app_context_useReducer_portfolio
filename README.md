@@ -49,14 +49,14 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 
 ### 📸 Screenshots
 
-#### Desktop Layout 
+ ** Desktop Layout ** 
 
 ![Weather App Dark Theme Desktop Layout - Details Card](./screenshots/screenshot-dark-theme.png)
 ![Weather App Light Theme Desktop Layout - Details Card](./screenshots/screenshot-light-theme.png)
 ![Weather App Dark Theme Desktop Layout - Basic Card](./screenshots/screenshot-basic-weather-dark-theme.png)
 ![Weather App Light Theme Desktop - Basic Card ](./screenshots/screenshot-basic-weather-light-theme.png)
 
-#### Mobile Layout
+ ** Mobile Layout **
 
 ![Weather App Dark Theme Mobile Layout - Basic Card](./screenshots/screenshot-dark-theme-mobile%20layout-basic-card.png)
 ![Weather App Dark Theme Mobile Layout - Details Card](./screenshots/screenshot-dark-theme-mobile%20layout-details-card.png)
