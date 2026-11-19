@@ -12,14 +12,14 @@ The project demonstrates practical experience with React Context API, useReducer
 - [Overview](#overview)
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Performance & Accessibility](#performance-and-accessibility)
-- [Live Demo](#live-demo)
+- [Performance & Accessibility](#performance--accessibility)
+- [Live Demo & Source Code](#live-demo--source-code)
 - [Technologies Used](#technologies-used)
 - [State Management: Context API & useReducer](#state-management-context-api--usereducer)
   - [Why use useReducer](#why-use-usereducer)
 - [What I learned](#what-i-learned)
 - [Useful Resources](#useful-resources)
-- [Installation & Local Setup](#installation-&-local-setup)
+- [Installation & Local Setup](#installation--local-setup)
 - [Contributing](#contributing)
 - [Author](#author)
 
@@ -81,7 +81,7 @@ The audit focused on four key areas:
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
 
 
-### Live Demo
+### Live Demo & Source Code
 
 - Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
