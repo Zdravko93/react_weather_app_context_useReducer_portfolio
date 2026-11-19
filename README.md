@@ -67,7 +67,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 
 ---
 
-## 📊 Performance & Accessibility
+## 📊Performance & Accessibility
 
 The application was audited using **Google Lighthouse** in production mode to evaluate its overall quality.
 
