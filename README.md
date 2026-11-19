@@ -92,7 +92,7 @@ The audit focused on four key areas:
 
 ---
 
-## 🛠️ Technologies Used
+## 🔧 Technologies Used
 
 - **HTML5** - Semantic markup
 - **CSS3** - Styling, CSS variables, Flexbox, and responsive layouts
