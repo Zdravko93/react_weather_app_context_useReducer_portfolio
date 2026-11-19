@@ -116,7 +116,7 @@ Its main advantages include:
 Combined with Context API, this approach allows shared application state to be accessed across components without excessive prop drilling.
 
 
-### 📘 What I Learned
+## 📘 What I Learned
 
 - Improved responsive design principles
 - Strengthened asynchronous JavaScript skills using `fetch()`
