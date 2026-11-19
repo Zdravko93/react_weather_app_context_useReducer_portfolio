@@ -47,7 +47,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 - Use geolocation to retrieve local weather information and forecasts
 
 
-### 📸 Screenshots
+## 📸 Screenshots
 
  **Desktop Layout** 
 
