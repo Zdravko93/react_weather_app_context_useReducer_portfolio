@@ -7,7 +7,7 @@ The project demonstrates practical experience with React Context API, useReducer
 ⚠️ **Note**: This repository was rebuilt and re-uploaded following issues with the previous version (cache corruption and deployment bugs). The current version includes a complete refactor with an improved project structure and documentation.
 
 
-## Table of contents 
+ Table of contents 
 
 - [Overview](#overview)
 - [Features](#features)
