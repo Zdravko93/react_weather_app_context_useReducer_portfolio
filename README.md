@@ -1,143 +1,145 @@
 # Weather App - Context API, useReducer
 
-⚠️ Note: This project was fully rebuilt and re-uploaded due to issues with the previous repo (cache corruption & deployment bugs). The current version reflects a complete refactor with improved structure and documentation.
+A responsive weather application built with React, allowing users to explore current weather conditions and forecasts for locations worldwide.
 
-This is a weather application built with React to showcase my skills and growth in front-end development. The app allows users to check current weather conditions for any location globally, providing weather data and interactive features. The goal of this project is to demonstrate my ability to integrate multiple technologies, interact with third-party APIs, and build a polished, user-friendly application. It also serves as a portfolio piece highlighting my front-end development skills.
+The project demonstrates practical experience with React Context API, useReducer, asynchronous API requests, and state management. It also focuses on creating an intuitive user experience with interactive features and customizable settings.
+
+⚠️ **Note**: This repository was rebuilt and re-uploaded following issues with the previous version (cache corruption and deployment bugs). The current version includes a complete refactor with an improved project structure and documentation.
+
 
 ## Table of contents
 
 - [Overview](#overview)
-- [The challenge](#the-challenge)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Performance & Accessibility](#performance-and-accessibility)
-- [Links](#links)
-- [Built with](#built-with)
-- [useReducer](#usereducer)
+- [Live Demo](#live-demo)
+- [Technologies Used](#technologies-used)
+- [State Management: Context API & useReducer](#state-management-context-api--usereducer)
   - [Why use useReducer](#why-use-usereducer)
 - [What I learned](#what-i-learned)
 - [Useful Resources](#useful-resources)
+- [Installation & Local Setup](#installation-&-local-setup)
 - [Contributing](#contributing)
-- [Installation Instructions](#installation-instructions)
 - [Author](#author)
+
 
 ## Overview
 
-### The challenge
+The goal of this project was to build a feature-rich weather application using the **OpenWeather API**.
 
-The idea for this project was to build a weather app using external API(OpenWeather API) that allows users to:
+Users can search for weather information worldwide, explore detailed forecasts, customize the interface, and save their favorite locations for quick access.
 
-- Search for the current weather of any city or location in the world through an external weather API
-- View details like temperature, air quality, humidity, wind speed, and weather conditions (e.g., clear, cloudy, rainy).
-- View 5-day weather forecast through an external weather API
-- Interact with the app in a clean, responsive layout that adapts to various screen sizes.
-- Allow the user to toggle between dark (default) and light themes
-- Allow the user to toggle between Celsius and Fahrenheit units
-- Allow the user to navigate between the basic weather card and detailed weather card including forecast
-- Allow the user to save cities to a favorite list, with an option to directly display the weather data for that city, without needing to search for it again
-- Save cities to local storage to persist data
-- Allow the user to remove a city from the favorites list and from the local storage
-- Allow the user to display weather data, including a 5-day forecast using geolocation
-
-## Features
+  
+## ⚡ Features
 
 ---
 
-- Search current weather for any city/location worldwide
-- View temperature, air quality, humidity, wind speed, and weather conditions
-- See 5-day weather forecast
-- Toggle between dark (default) and light themes
-- Switch between Celsius and Fahrenheit units
-- Navigate between basic and detailed weather cards
-- Save favorite cities with persistent local storage
-- Cities saved to favorites are stored in local storage, so users’ favorite locations persist even after refreshing or closing the browser.
-- Remove cities from favorites and local storage
-- Use geolocation to get local weather and forecast
+- Search for current weather conditions in cities worldwide
+- Display temperature, air quality, humidity, wind speed, and weather conditions
+- View a 5-day weather forecast
+- Toggle between dark and light themes
+- Switch between Celsius and Fahrenheit
+- Navigate between basic and detailed weather views
+- Save favorite cities for quick access
+- Persist favorite locations using local storage
+- Remove saved cities from the favorites list
+- Use geolocation to retrieve local weather information and forecasts
 
-### Screenshots
+
+### 📸 Screenshots
+
+#### Desktop Layout ####
 
 ![Weather App Dark Theme Desktop Layout - Details Card](./screenshots/screenshot-dark-theme.png)
 ![Weather App Light Theme Desktop Layout - Details Card](./screenshots/screenshot-light-theme.png)
 ![Weather App Dark Theme Desktop Layout - Basic Card](./screenshots/screenshot-basic-weather-dark-theme.png)
 ![Weather App Light Theme Desktop - Basic Card ](./screenshots/screenshot-basic-weather-light-theme.png)
+
+#### Mobile Layout ####
+
 ![Weather App Dark Theme Mobile Layout - Basic Card](./screenshots/screenshot-dark-theme-mobile%20layout-basic-card.png)
 ![Weather App Dark Theme Mobile Layout - Details Card](./screenshots/screenshot-dark-theme-mobile%20layout-details-card.png)
 ![Weather App Light Theme Mobile Layout - Basic Card](./screenshots/screenshot-light-theme-mobile%20layout-basic-card.png)
 ![Weather App Light Theme Mobile Layout - Details Card](./screenshots/screenshot-light-theme-mobile%20layout-details-card.png)
 
+
 ### Performance & Accessibility
 
-To ensure the application delivers a fast and accessible user experience, I audited the project using **Google Lighthouse**.
+The application was audited using **Google Lighthouse** in production mode to evaluate its overall quality.
 
-The app was tested in production mode and achieved strong results across key metrics:
+The audit focused on four key areas:
 
-- **Performance**: Optimized asset loading and efficient state management
-- **Accessibility**: Semantic HTML and proper contrast for dark/light themes
-- **Best Practices**: Modern React patterns and secure API usage
-- **SEO**: Proper metadata and structure for discoverability
+- **Performance**:  Asset loading and application responsiveness
+- **Accessibility**: Semantic HTML and appropriate color contrast across themes
+- **Best Practices**: Modern React development practices and API integration
+- **SEO**: Metadata and document structure
+
+#### Lighthouse Reports ####
 
 ![Lighthouse Report Mobile](./screenshots/Lighthouse-report-mobile.png)
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
 
-### Links
+
+### Live Demo
 
 - Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
 
-### Built with
 
-- Semantic HTML5
-- **JavaScript**
-- **React**
-- **Context API**: For managing global state and centralizing the application logic to avoid redundant prop drilling
-- **useReducer**: A React hook used for managing more complex state logic
-- OpenWeather API: Used to fetch weather data
-- Fetch API: For handling asynchronous requests to the API
-- CSS variables: For light theme styles
-- CSS Flexbox: For both basic layout and responsive design
+### Technologies Used
 
-#### useReducer
+- **HTML5** - Semantic markup
+- **CSS3** - Styling, CSS variables, Flexbox, and responsive layouts
+- **JavaScript (ES6+)** - Application logic and asynchronous operations
+- **React** - Component-based application development
+- **Context API** - Global state management and avoiding unnecessary prop drilling
+- **useReducer** - Managing complex state transitions
+- **OpenWeather API** - Retrieving weather information and forecasts
+- **Fetch API** - Handling asynchronous HTTP requests
+- **Git & GitHub** - Version control and project management
 
-In this project, I used the 'useReducer' hook to manage state in components where the logic was more complex than a simple `useState` could handle.
+#### State Management: Context API & useReducer
+
+This project uses **React Context API** and **useReducer** to organize and manage application state.
 
 ##### Why use `useReducer`
 
-- **More Complex State Logic**: When the state logic involves multiple sub-values or when the next state depends on the previous one, `useState` can become cumbersome. `useReducer` is ideal for managing more complex state transitions, especially when the component state becomes difficult to manage with multiple `useState` hooks.
+I chose useReducer for managing state where multiple related values and more complex state transitions were involved.
 
-- **Predictable State Changes**: `useReducer` works by dispatching actions that modify the state based on the current state. This approach makes it easier to manage state transitions in a predictable manner, especially for larger applications.
+Its main advantages include:
+
+- ** Complex State Logic:** Keeps related state updates organized in one reducer function
+- **Predictable State Changes:** Uses dispatched actions to determine how the state changes
+- **Maintainability:** Separates state transition logic from component rendering
+
+Combined with Context API, this approach allows shared application state to be accessed across components without excessive prop drilling.
+
 
 ### 📘 What I Learned
 
 - Improved responsive design principles
-- Mastered asynchronous programming using `fetch()`
-- Focused on clean, minimalistic UI/UX
+- Strengthened asynchronous JavaScript skills using `fetch()`
+- Focused on clean and minimalistic UI/UX
 - Implemented error handling for API failures
-- Deepened knowledge of React Context and `useReducer`
-- Boosted confidence through problem-solving
-- Improved refactoring and estimation skills
+- Deepened my understanding of React Context API and `useReducer`
+- Improved problem-solving and debugging skills
+- Gained experience with refactoring and project structure improvements
 
-## Useful Resources
 
-- [React](https://react.dev/) - React docs
-- [MDN Web Docs - Flexbox](https://developer.mozilla.org/en-US/) - An essential guide for working with Flexbox for responsive layouts.
-- [CSS-Tricks](https://css-tricks.com/) - Using Custom Properties (CSS Variables) - Helpful resource for understanding CSS custom properties (variables) and how to use them in your projects.
-- [Stack Overflow](https://stackoverflow.com/questions) - Excellent resource when you find yourself stuck
+## 📚 Useful Resources
 
-## Contributing
+- [React Documentation](https://react.dev/) - Official React documentation
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Reference for modern web technologies and CSS Flexbox
+- [CSS-Tricks](https://css-tricks.com/) - Articles and guides on CSS and custom properties
+- [Stack Overflow](https://stackoverflow.com/questions) - Community discussions and solutions to development challenges
 
-Contributions are welcome! If you'd like to improve the app or fix any bugs, please follow these steps:
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Make your changes and commit them (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature-name`)
-5. Open a Pull Request explaining your changes
+## 💻 Installation & Local Setup
 
-Feel free to open issues for bugs or feature requests!
+To run the application locally:
 
-## Installation Instructions
-
-1. Clone the repository to your local machine using Git:
+1. Clone the repository:
    ```bash
    git clone https://github.com/Zdravko93/weather_app_context_useReducer_portfolio.git
    ```
@@ -145,7 +147,7 @@ Feel free to open issues for bugs or feature requests!
    ```bash
    cd weather_app_context_useReducer_portfolio
    ```
-3. Install the necessary dependencies
+3. Install dependencies
 
    ```bash
     npm install
@@ -156,15 +158,29 @@ Feel free to open issues for bugs or feature requests!
    ```bash
    npm start
    ```
+   
+5. Open your browser at:
+ 
+   http://localhost:3000
 
-   This will launch the application in development mode. By default, it will be available in your browser at http://localhost:3000. The page will automatically reload if you make edits.
 
-5. Start contributing or experimenting:
-   Now that the project is up and running, you can start making changes to the code. You can experiment with adding new features, modifying existing components, or improving the app. Any changes you make will be reflected live in your browser, thanks to the development server.
+## 🤝 Contributing
 
-## Author
+Contributions, suggestions, and bug reports are welcome!
 
-Front-end developer with a passion for building interactive, user-friendly web applications. This project is a reflection of my growth as a developer and my commitment to building clean, functional, and beautiful web experiences.
+To contribute:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make your changes and commit them (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a Pull Request explaining your changes
+
+You can also open an issue to report bugs or suggest improvements.
+
+
+## 📫 Author
+Created by **Zdravko93**.
 
 - Github - [Zdravko](https://github.com/Zdravko93)
 - Frontend Mentor - [@Zdravko93](https://www.frontendmentor.io/profile/Zdravko93)
