@@ -6,6 +6,7 @@ The project demonstrates practical experience with React Context API, useReducer
 
 ⚠️ **Note**: This repository was rebuilt and re-uploaded following issues with the previous version (cache corruption and deployment bugs). The current version includes a complete refactor with an improved project structure and documentation.
 
+---
 
  ## Table of Contents 
 
@@ -23,6 +24,7 @@ The project demonstrates practical experience with React Context API, useReducer
 - [Contributing](#contributing)
 - [Author](#author)
 
+---
 
 ## Overview 
 
@@ -30,10 +32,9 @@ The goal of this project was to build a feature-rich weather application using t
 
 Users can search for weather information worldwide, explore detailed forecasts, customize the interface, and save their favorite locations for quick access.
 
+---
   
 ## ⚡Features 
-
----
 
 - Search for current weather conditions in cities worldwide
 - Display temperature, air quality, humidity, wind speed, and weather conditions
@@ -46,6 +47,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 - Remove saved cities from the favorites list
 - Use geolocation to retrieve local weather information and forecasts
 
+---
 
 ## 📸Screenshots
 
@@ -63,6 +65,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 ![Weather App Light Theme Mobile Layout - Basic Card](./screenshots/screenshot-light-theme-mobile%20layout-basic-card.png)
 ![Weather App Light Theme Mobile Layout - Details Card](./screenshots/screenshot-light-theme-mobile%20layout-details-card.png)
 
+---
 
 ## 📊Performance & Accessibility
 
@@ -80,12 +83,14 @@ The audit focused on four key areas:
 ![Lighthouse Report Mobile](./screenshots/Lighthouse-report-mobile.png)
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
 
+---
 
 ## 🌐Live Demo & Source Code
 
 - Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
 
+---
 
 ## 🛠️Technologies Used
 
@@ -98,6 +103,8 @@ The audit focused on four key areas:
 - **OpenWeather API** - Retrieving weather information and forecasts
 - **Fetch API** - Handling asynchronous HTTP requests
 - **Git & GitHub** - Version control and project management
+
+---
 
 ## 🧩State Management: Context API & useReducer 
 
@@ -115,6 +122,7 @@ Its main advantages include:
 
 Combined with Context API, this approach allows shared application state to be accessed across components without excessive prop drilling.
 
+---
 
 ## 📘What I Learned
 
@@ -126,6 +134,7 @@ Combined with Context API, this approach allows shared application state to be a
 - Improved problem-solving and debugging skills
 - Gained experience with refactoring and project structure improvements
 
+---
 
 ## 📚Useful Resources
 
@@ -134,6 +143,7 @@ Combined with Context API, this approach allows shared application state to be a
 - [CSS-Tricks](https://css-tricks.com/) - Articles and guides on CSS and custom properties
 - [Stack Overflow](https://stackoverflow.com/questions) - Community discussions and solutions to development challenges
 
+---
 
 ## 💻Installation & Local Setup
 
@@ -163,6 +173,7 @@ To run the application locally:
  
    http://localhost:3000
 
+---
 
 ## 🤝Contributing
 
@@ -178,6 +189,7 @@ To contribute:
 
 You can also open an issue to report bugs or suggest improvements.
 
+---
 
 ## 📫Author
 Created by **Zdravko93**.
