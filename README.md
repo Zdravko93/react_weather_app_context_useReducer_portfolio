@@ -11,18 +11,18 @@ The project demonstrates practical experience with React Context API, useReducer
  ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Performance & Accessibility](#performance--accessibility)
-- [Live Demo & Source Code](#live-demo--source-code)
-- [Technologies Used](#technologies-used)
-- [State Management: Context API & useReducer](#state-management-context-api--usereducer)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Performance & Accessibility](#-performance--accessibility)
+- [Live Demo & Source Code](#-live-demo--source-code)
+- [Technologies Used](#-technologies-used)
+- [State Management: Context API & useReducer](#-state-management-context-api--usereducer)
   - [Why use useReducer](#why-use-usereducer)
-- [What I learned](#what-i-learned)
-- [Useful Resources](#useful-resources)
-- [Installation & Local Setup](#installation--local-setup)
-- [Contributing](#contributing)
-- [Author](#author)
+- [What I learned](#-what-i-learned)
+- [Useful Resources](#-useful-resources)
+- [Installation & Local Setup](#-installation--local-setup)
+- [Contributing](#-contributing)
+- [Author](#-author)
 
 ---
 
@@ -34,7 +34,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 
 ---
   
-## ⚡Features
+## ⚡ Features
 
 - Search for current weather conditions in cities worldwide
 - Display temperature, air quality, humidity, wind speed, and weather conditions
@@ -49,7 +49,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 
 ---
 
-## 📸Screenshots
+## 📸 Screenshots
 
  **Desktop Layout**
 
@@ -67,7 +67,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 
 ---
 
-## 📊Performance & Accessibility
+## 📊 Performance & Accessibility
 
 The application was audited using **Google Lighthouse** in production mode to evaluate its overall quality.
 
@@ -85,14 +85,14 @@ The audit focused on four key areas:
 
 ---
 
-## 🌐Live Demo & Source Code
+## 🌐 Live Demo & Source Code
 
 - Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
 
 ---
 
-## 🛠️Technologies Used
+## 🛠️ Technologies Used
 
 - **HTML5** - Semantic markup
 - **CSS3** - Styling, CSS variables, Flexbox, and responsive layouts
@@ -106,7 +106,7 @@ The audit focused on four key areas:
 
 ---
 
-## 🧩State Management: Context API & useReducer
+## 🧩 State Management: Context API & useReducer
 
 This project uses **React Context API** and **useReducer** to organize and manage application state.
 
@@ -124,7 +124,7 @@ Combined with Context API, this approach allows shared application state to be a
 
 ---
 
-## 📘What I Learned
+## 📘 What I Learned
 
 - Improved responsive design principles
 - Strengthened asynchronous JavaScript skills using `fetch()`
@@ -136,7 +136,7 @@ Combined with Context API, this approach allows shared application state to be a
 
 ---
 
-## 📚Useful Resources
+## 📚 Useful Resources
 
 - [React Documentation](https://react.dev/) - Official React documentation
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) - Reference for modern web technologies and CSS Flexbox
@@ -145,7 +145,7 @@ Combined with Context API, this approach allows shared application state to be a
 
 ---
 
-## 💻Installation & Local Setup
+## 💻 Installation & Local Setup
 
 To run the application locally:
 
@@ -175,7 +175,7 @@ To run the application locally:
 
 ---
 
-## 🤝Contributing
+## 🤝 Contributing
 
 Contributions, suggestions, and bug reports are welcome!
 
@@ -191,7 +191,7 @@ You can also open an issue to report bugs or suggest improvements.
 
 ---
 
-## 📫Author
+## 📫 Author
 Created by **Zdravko93**.
 
 - Github - [Zdravko](https://github.com/Zdravko93)
