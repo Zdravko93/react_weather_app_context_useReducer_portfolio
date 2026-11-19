@@ -103,7 +103,7 @@ The audit focused on four key areas:
 
 This project uses **React Context API** and **useReducer** to organize and manage application state.
 
-Why use `useReducer`
+#### Why use `useReducer`
 
 I chose useReducer for managing state where multiple related values and more complex state transitions were involved.
 
