@@ -31,7 +31,7 @@ The goal of this project was to build a feature-rich weather application using t
 Users can search for weather information worldwide, explore detailed forecasts, customize the interface, and save their favorite locations for quick access.
 
   
-## ⚡ Features 
+## ⚡Features 
 
 ---
 
@@ -47,7 +47,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 - Use geolocation to retrieve local weather information and forecasts
 
 
-## 📸 Screenshots
+## 📸Screenshots
 
  **Desktop Layout** 
 
@@ -64,7 +64,7 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 ![Weather App Light Theme Mobile Layout - Details Card](./screenshots/screenshot-light-theme-mobile%20layout-details-card.png)
 
 
-## Performance & Accessibility
+## 📊Performance & Accessibility
 
 The application was audited using **Google Lighthouse** in production mode to evaluate its overall quality.
 
@@ -81,13 +81,13 @@ The audit focused on four key areas:
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
 
 
-## Live Demo & Source Code
+## 🌐Live Demo & Source Code
 
 - Solution URL: [Github Repo](https://github.com/Zdravko93/react_weather_app_context_useReducer_portfolio)
 - Live Site URL: [Live Demo](https://zdravko93.github.io/react_weather_app_context_useReducer_portfolio/)
 
 
-## Technologies Used
+## 🛠️Technologies Used
 
 - **HTML5** - Semantic markup
 - **CSS3** - Styling, CSS variables, Flexbox, and responsive layouts
@@ -99,7 +99,7 @@ The audit focused on four key areas:
 - **Fetch API** - Handling asynchronous HTTP requests
 - **Git & GitHub** - Version control and project management
 
-## State Management: Context API & useReducer 
+## 🧩State Management: Context API & useReducer 
 
 This project uses **React Context API** and **useReducer** to organize and manage application state.
 
@@ -116,7 +116,7 @@ Its main advantages include:
 Combined with Context API, this approach allows shared application state to be accessed across components without excessive prop drilling.
 
 
-## 📘 What I Learned
+## 📘What I Learned
 
 - Improved responsive design principles
 - Strengthened asynchronous JavaScript skills using `fetch()`
@@ -127,7 +127,7 @@ Combined with Context API, this approach allows shared application state to be a
 - Gained experience with refactoring and project structure improvements
 
 
-## 📚 Useful Resources
+## 📚Useful Resources
 
 - [React Documentation](https://react.dev/) - Official React documentation
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) - Reference for modern web technologies and CSS Flexbox
@@ -135,7 +135,7 @@ Combined with Context API, this approach allows shared application state to be a
 - [Stack Overflow](https://stackoverflow.com/questions) - Community discussions and solutions to development challenges
 
 
-## 💻 Installation & Local Setup
+## 💻Installation & Local Setup
 
 To run the application locally:
 
@@ -164,7 +164,7 @@ To run the application locally:
    http://localhost:3000
 
 
-## 🤝 Contributing
+## 🤝Contributing
 
 Contributions, suggestions, and bug reports are welcome!
 
@@ -179,7 +179,7 @@ To contribute:
 You can also open an issue to report bugs or suggest improvements.
 
 
-## 📫 Author
+## 📫Author
 Created by **Zdravko93**.
 
 - Github - [Zdravko](https://github.com/Zdravko93)
