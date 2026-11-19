@@ -47,16 +47,16 @@ Users can search for weather information worldwide, explore detailed forecasts, 
 - Use geolocation to retrieve local weather information and forecasts
 
 
-# 📸 Screenshots
+### 📸 Screenshots
 
- ** Desktop Layout ** 
+ **Desktop Layout** 
 
 ![Weather App Dark Theme Desktop Layout - Details Card](./screenshots/screenshot-dark-theme.png)
 ![Weather App Light Theme Desktop Layout - Details Card](./screenshots/screenshot-light-theme.png)
 ![Weather App Dark Theme Desktop Layout - Basic Card](./screenshots/screenshot-basic-weather-dark-theme.png)
 ![Weather App Light Theme Desktop - Basic Card ](./screenshots/screenshot-basic-weather-light-theme.png)
 
- ** Mobile Layout **
+ **Mobile Layout**
 
 ![Weather App Dark Theme Mobile Layout - Basic Card](./screenshots/screenshot-dark-theme-mobile%20layout-basic-card.png)
 ![Weather App Dark Theme Mobile Layout - Details Card](./screenshots/screenshot-dark-theme-mobile%20layout-details-card.png)
@@ -75,7 +75,7 @@ The audit focused on four key areas:
 - **Best Practices**: Modern React development practices and API integration
 - **SEO**: Metadata and document structure
 
-##Lighthouse Reports - Screenshots ## 
+### Lighthouse Reports - Screenshots
 
 ![Lighthouse Report Mobile](./screenshots/Lighthouse-report-mobile.png)
 ![Lighthouse Report Desktop](./screenshots/Lighthouse-report-desktop.png)
@@ -99,17 +99,17 @@ The audit focused on four key areas:
 - **Fetch API** - Handling asynchronous HTTP requests
 - **Git & GitHub** - Version control and project management
 
-### State Management: Context API & useReducer ###
+### State Management: Context API & useReducer 
 
 This project uses **React Context API** and **useReducer** to organize and manage application state.
 
-##### Why use `useReducer`
+Why use `useReducer`
 
 I chose useReducer for managing state where multiple related values and more complex state transitions were involved.
 
 Its main advantages include:
 
-- ** Complex State Logic:** Keeps related state updates organized in one reducer function
+- **Complex State Logic:** Keeps related state updates organized in one reducer function
 - **Predictable State Changes:** Uses dispatched actions to determine how the state changes
 - **Maintainability:** Separates state transition logic from component rendering
 
