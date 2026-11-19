@@ -164,7 +164,7 @@ To run the application locally:
    http://localhost:3000
 
 
-## 🤝Contributing
+## 🤝 Contributing
 
 Contributions, suggestions, and bug reports are welcome!
 
